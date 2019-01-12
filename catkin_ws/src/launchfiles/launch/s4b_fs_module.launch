@@ -1,0 +1,36 @@
+<launch>
+	
+	<!-- launch video stream front camera-->
+	<include file="$(find video_stream_opencv)/launch/camera.launch">
+        <!-- node name and ros graph name -->
+        <arg name="camera_name" value="front_camera" />
+        <!-- means video device 0, /dev/video0 -->
+        <arg name="video_stream_provider" value="0" />
+        <!-- throttling the querying of frames to -->
+        <arg name="fps" value="20" />
+        <arg name="width" value="640" />
+        <arg name="height" value="480" />
+        <!-- setting frame_id -->
+        <arg name="frame_id" value="front_camera" />
+        <arg name="camera_info_url" value="" />
+        <!-- flip the image horizontally (mirror it) -->
+        <arg name="flip_horizontal" value="false" />
+        <!-- flip the image vertically -->
+        <arg name="flip_vertical" value="false" />
+        <!-- visualize on an image_view window the stream generated -->
+        <arg name="visualize" value="false" />
+	</include>	
+	<include file="$(find ros_tsr_s4b)/launchfiles/ros_tsr_s4b.launch">
+	    <!-- model names are tsd_lite or tsd_full -->
+	    <arg name="model_name" value="tsd_full"/>
+	    <!-- confiidence from 1 to 100% -->
+	    <arg name="min_confidence" value="50"/>
+	    <!-- image topic for traffic sign detection -->
+	    <arg name="image_topic" value="/front_camera/image_raw"/>
+	    <!-- publish image with bounding boxes and symbols if demo mode? -->
+	    <arg name="visualize" value="true"/>
+	    <!-- interpreter update interval in seconds -->
+	    <arg name="interpreter_update_interval" value="1"/>
+	</include>
+</launch>
+

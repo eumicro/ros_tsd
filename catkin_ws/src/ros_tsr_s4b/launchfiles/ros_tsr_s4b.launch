@@ -1,0 +1,25 @@
+<launch>
+    <!-- requiered arguments -->
+	<arg name="model_name" />
+	<arg name="min_confidence" />
+    <arg name="image_topic" />
+    <arg name="visualize" />
+    <arg name="interpreter_update_interval" />
+    <!-- nodes -->
+	<node pkg="ros_tsr_s4b" type ="ts_detection.py" name="ts_detection" output ="screen">
+	    <!-- model names are tsd_lite or tsd_full -->
+	    <param name="model_name" value="$(arg model_name)" type ="str" />
+	    <!-- min_confidence from 1 to 100% -->
+	    <param name="min_confidence" value="$(arg min_confidence)" type="int" />
+	    <!-- images for detector -->
+	    <param name="image_topic" value="$(arg image_topic)" type="str" />
+	    <!-- visualization mode true or false -->
+	    <param name="visualize" value="$(arg visualize)" type="boolean" />
+	</node>
+	<node pkg="ros_tsr_s4b" type ="ts_interpretation.py" name="ts_interpretation" output ="screen">
+	    <!-- visualization mode true or false -->
+	    <param name="visualize" value="$(arg visualize)" type="boolean" />
+	    <!-- time interval in seconds between updates -->
+	    <param name="update_interval" value="$(arg interpreter_update_interval)" type ="int" />
+	</node>
+</launch>

@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE traffic_sign [
+        <!ELEMENT traffic_sign (ts_group)*>
+        <!ELEMENT ts_group (ts|invalidates)*>
+        <!ATTLIST ts_group
+                name CDATA #REQUIRED><!ELEMENT ts (invalidates)*>
+        <!ATTLIST ts
+                name CDATA #REQUIRED>
+        <!ELEMENT invalidates (#PCDATA)>
+        <!ATTLIST invalidates
+                name CDATA #REQUIRED>
+        ]>
+<traffic_sign>
+    <ts_group name="warning">
+        <invalidates name="warning"/>
+        <ts name="Z101">
+
+        </ts>
+
+        <ts name="Z101-11">
+
+        </ts>
+        <ts name="Z101-51">
+
+        </ts>
+        <ts name="Z101-52">
+
+        </ts>
+        <ts name="Z102">
+
+        </ts>
+        <ts name="Z103-10">
+            <invalidates name="Z103-20"/>
+        </ts>
+        <ts name="Z103-20">
+            <invalidates name="Z103-10"/>
+        </ts>
+        <ts name="Z105-10">
+
+        </ts>
+        <ts name="Z105-20">
+
+        </ts>
+        <ts name="Z112">
+
+        </ts>
+        <ts name="Z114">
+
+        </ts>
+        <ts name="Z120">
+
+        </ts>
+        <ts name="Z121-10">
+
+        </ts>
+        <ts name="Z121-20">
+
+        </ts>
+        <ts name="Z123">
+
+        </ts>
+        <ts name="Z125">
+
+        </ts>
+        <ts name="Z131">
+
+        </ts>
+        <ts name="Z133-10">
+
+        </ts>
+        <ts name="Z136-10">
+
+        </ts>
+        <ts name="Z138-10">
+
+        </ts>
+        <ts name="Z142-10">
+
+        </ts>
+        <ts name="Z151">
+
+        </ts>
+        <ts name="Z350">
+
+        </ts>
+    </ts_group>
+    <ts_group name="right-of-way">
+        <invalidates name="right-of-way"/>
+        <ts name="Z205">
+            <invalidates name="speed-limit"/>
+        </ts>
+        <ts name="Z206">
+            <invalidates name="traffic_sign"/>
+        </ts>
+        <ts name="Z306">
+
+        </ts>
+        <ts name="Z307">
+
+        </ts>
+        <ts name="Z301">
+
+        </ts>
+
+    </ts_group>
+    <ts_group name="speed-limit">
+        <invalidates name="speed-limit"/>
+        <ts name="Z274-10">
+
+        </ts>
+        <ts name="Z274-20">
+
+        </ts>
+        <ts name="Z274-30">
+
+        </ts>
+        <ts name="Z274-40">
+
+        </ts>
+        <ts name="Z274-50">
+
+        </ts>
+        <ts name="Z274-60">
+
+        </ts>
+        <ts name="Z274-70">
+
+        </ts>
+        <ts name="Z274-80">
+
+        </ts>
+
+        <ts name="Z278-10">
+
+        </ts>
+        <ts name="Z278-20">
+
+        </ts>
+        <ts name="Z278-30">
+
+        </ts>
+        <ts name="Z278-40">
+
+        </ts>
+        <ts name="Z278-50">
+
+        </ts>
+        <ts name="Z278-60">
+
+        </ts>
+        <ts name="Z278-70">
+
+        </ts>
+        <ts name="Z278-80">
+
+        </ts>
+    </ts_group>
+    <ts_group name="regulatory">
+        <invalidates name="regulatory"/>
+        <ts name="Z237">
+        </ts>
+        <ts name="Z239">
+
+        </ts>
+        <ts name="Z240">
+
+        </ts>
+        <ts name="Z241-30">
+
+        </ts>
+        <ts name="Z242-1">
+
+        </ts>
+        <ts name="Z242-2">
+
+        </ts>
+        <ts name="Z244-1">
+
+        </ts>
+        <ts name="Z244-2">
+
+        </ts>
+        <ts name="Z245">
+
+        </ts>
+        <ts name="Z250">
+
+        </ts>
+        <ts name="Z251">
+
+        </ts>
+        <ts name="Z253">
+
+        </ts>
+        <ts name="Z254">
+
+        </ts>
+        <ts name="Z259">
+
+        </ts>
+        <ts name="Z260">
+
+        </ts>
+
+        <ts name="Z272">
+
+        </ts>
+
+        <ts name="Z276">
+
+        </ts>
+        <ts name="Z277">
+
+        </ts>
+        <ts name="Z280">
+            <invalidates name="Z276"/>
+        </ts>
+        <ts name="Z281">
+            <invalidates name="Z277"/>
+        </ts>
+        <ts name="Z282">
+            <invalidates name="speed-limit"/>
+        </ts>
+        <ts name="Z283">
+
+        </ts>
+        <ts name="Z286">
+
+        </ts>
+        <ts name="Z290-2">
+
+        </ts>
+
+    </ts_group>
+    <ts_group name="mandatory-direction">
+        <invalidates name="mandatory-direction"/>
+        <ts name="Z267">
+            <invalidates name="traffic_sign"/>
+        </ts>
+        <ts name="Z208">
+            <invalidates name="speed-limit"/>
+        </ts>
+        <ts name="Z209">
+            <invalidates name="speed-limit"/>
+        </ts>
+        <ts name="Z209-10">
+            <invalidates name="speed-limit"/>
+        </ts>
+        <ts name="Z209-30">
+            <invalidates name="speed-limit"/>
+        </ts>
+        <ts name="Z211">
+            <invalidates name="speed-limit"/>
+        </ts>
+        <ts name="Z214">
+            <invalidates name="speed-limit"/>
+        </ts>
+        <ts name="Z214-10">
+            <invalidates name="speed-limit"/>
+        </ts>
+        <ts name="Z214-30">
+            <invalidates name="speed-limit"/>
+        </ts>
+        <ts name="Z215">
+            <invalidates name="speed-limit"/>
+        </ts>
+        <ts name="Z220-10">
+            <invalidates name="speed-limit"/>
+        </ts>
+        <ts name="Z220-20">
+            <invalidates name="speed-limit"/>
+        </ts>
+        <ts name="Z222">
+
+        </ts>
+        <ts name="Z222-10">
+
+        </ts>
+    </ts_group>
+</traffic_sign>

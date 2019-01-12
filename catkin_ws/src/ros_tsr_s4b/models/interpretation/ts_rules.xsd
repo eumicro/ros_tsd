@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="traffic_sign" type="traffic_signType"/>
+  <xs:complexType name="invalidatesType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="name" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="traffic_signType">
+    <xs:sequence>
+      <xs:element type="ts_groupType" name="ts_group" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="tsType" mixed="true">
+    <xs:sequence>
+      <xs:element type="invalidatesType" name="invalidates" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="name" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="ts_groupType">
+    <xs:sequence>
+      <xs:element type="invalidatesType" name="invalidates" minOccurs="0"/>
+      <xs:element type="tsType" name="ts" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="name" use="optional"/>
+  </xs:complexType>
+</xs:schema>
