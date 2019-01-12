@@ -30,3 +30,5 @@ $ rostopic list
 beziehungsweise mit
 $ rosservice list
 ermittelt werden
+
+Eine etwas ausführliche Beschreibung findest Du hier: http://eugen-lange.de/german-traffic-sign-detection/ 
