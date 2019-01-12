@@ -1,3 +1,5 @@
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/zhzNXOa8b_M/0.jpg)](http://www.youtube.com/watch?v=zhzNXOa8b_M "ROS Integration of the Single Shot Detector for german traffic signs")
+
 #Installation
 - Um das Package installieren zu können sind Python in der Version 2.7.x notwendig (In der ROS Installation bereits enthalten).
 - Das Package benötigt die Python-Bibliotheken
